@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CFB 27 Dynasty Draft Room</title>
+<style>
+:root{--bg:#07111f;--panel:#0e1b2f;--panel2:#13243d;--ink:#eef5ff;--muted:#9fb3cc;--line:rgba(255,255,255,.10);--gold:#f4c542;--green:#41d37e;--red:#ff5e73;--blue:#62a8ff;--orange:#ff9f45;--shadow:0 18px 45px rgba(0,0,0,.28)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at top left,#163b72 0,#07111f 35%,#050915 100%);min-height:100vh}.app{max-width:1780px;margin:0 auto;padding:18px}.hero{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:16px}.brand{display:flex;gap:14px;align-items:center}.mark{width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,var(--gold),#fff2ad);color:#07111f;display:grid;place-items:center;font-weight:1000;font-size:25px;box-shadow:var(--shadow)}h1{font-size:32px;line-height:1;margin:0}.subtitle{color:var(--muted);font-size:14px;margin-top:7px}.pill{padding:9px 12px;border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:999px;color:var(--muted);font-weight:800}.grid{display:grid;grid-template-columns:340px 1fr 380px;gap:16px}.card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}.card h2{font-size:16px;margin:0;padding:16px;border-bottom:1px solid var(--line);letter-spacing:.3px;text-transform:uppercase;color:#dceaff}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}.stat{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:18px;padding:14px}.stat .label{color:var(--muted);font-size:12px;text-transform:uppercase;font-weight:900}.stat .value{font-size:22px;font-weight:1000;margin-top:5px}.stat .sub{font-size:12px;color:var(--muted);margin-top:2px}.draft-list{padding:10px}.pick{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;padding:10px;border-radius:15px;border:1px solid transparent;margin-bottom:8px;background:rgba(255,255,255,.035)}.pick.current{border-color:rgba(244,197,66,.65);background:rgba(244,197,66,.12)}.pick.done{opacity:.72}.picknum{height:34px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-weight:1000}.owner{font-weight:900}.selection{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:7px;margin-top:2px}.miniLogo{width:22px;height:22px;object-fit:contain;border-radius:50%;background:white;padding:2px}.toolbar{display:grid;grid-template-columns:minmax(110px,160px) minmax(95px,140px) minmax(75px,100px);gap:8px;padding:14px;border-bottom:1px solid var(--line);align-items:center}input,select{width:100%;border:none;outline:none;border-radius:14px;background:rgba(255,255,255,.08);color:var(--ink);padding:12px 13px;font-weight:800}select option{color:#111}.tableWrap{overflow:visible;max-height:none}table{width:100%;border-collapse:collapse;min-width:0}th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{background:#102139;color:#bcd0ea;font-size:12px;text-transform:uppercase;cursor:pointer}tr:hover{background:rgba(255,255,255,.05)}tbody tr{cursor:pointer}.teamHint{color:var(--muted);font-size:12px;font-weight:800;margin-top:2px}.teamCell{display:flex;align-items:center;gap:10px;font-weight:1000}.teamLogo{width:34px;height:34px;object-fit:contain;border-radius:50%;background:white;padding:3px;box-shadow:0 3px 12px rgba(0,0,0,.25)}.rating{font-weight:1000}.high{color:var(--green)}.mid{color:var(--gold)}.low{color:#f2a6b0}.btn{border:none;border-radius:13px;padding:10px 12px;font-weight:1000;color:#07111f;background:var(--gold);cursor:pointer}.btn:hover{filter:brightness(1.05);transform:translateY(-1px)}.btn.secondary{background:rgba(255,255,255,.10);color:var(--ink);border:1px solid var(--line)}.btn.danger{background:var(--red);color:white}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}.preview{padding:18px}.largeLogo{width:112px;height:112px;border-radius:28px;background:white;object-fit:contain;padding:12px;box-shadow:var(--shadow);display:block;margin:8px auto 14px}.preview h3{text-align:center;font-size:28px;margin:0}.prestige{text-align:center;color:var(--gold);font-weight:1000;margin:8px 0 18px}.metricGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}.metric{border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:16px;padding:12px;text-align:center}.metric span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:900}.metric b{font-size:22px}.bigPick{margin-top:14px;width:100%;font-size:16px;padding:14px}.admin{padding:14px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px}.history{padding:12px;max-height:240px;overflow:auto}.histItem{display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line);padding:9px 0;font-size:13px}.tag{display:inline-flex;align-items:center;border-radius:999px;padding:5px 8px;background:rgba(255,255,255,.08);font-weight:900;font-size:12px}.draftedRow{opacity:.42}.activeRow{outline:2px solid rgba(244,197,66,.72);background:rgba(244,197,66,.10)!important}.hideDrafted .draftedRow{display:none}.toast{position:fixed;right:18px;bottom:18px;background:#13243d;border:1px solid var(--line);border-radius:16px;padding:13px 15px;box-shadow:var(--shadow);display:none;font-weight:900}.mobilePick{display:none}@media(max-width:1200px){.grid{grid-template-columns:1fr}.tableWrap{max-height:none}.stats{grid-template-columns:repeat(2,1fr)}.mobilePick{display:block}.hero{align-items:flex-start;flex-direction:column}.toolbar{grid-template-columns:1fr 1fr 120px}}@media(max-width:650px){.app{padding:10px}h1{font-size:24px}.stats{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.card{border-radius:16px}.grid{gap:10px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="hero"><div class="brand"><div class="mark">27</div><div><h1>CFB 27 Dynasty Draft Room</h1><div class="subtitle">1.5-star and below team selection portal • local saved draft board • exportable results</div></div></div><div class="pill" id="saveStatus">Saved locally</div></header>
+  <section class="stats" id="stats"></section>
+  <main class="grid">
+    <aside class="card"><h2>Draft Order</h2><div class="draft-list" id="draftList"></div><h2>Pick History</h2><div class="history" id="history"></div><div class="admin"><button class="btn secondary" id="undoBtn">Undo Pick</button><button class="btn danger" id="resetBtn">Reset Draft</button><button class="btn secondary" id="exportBtn">Export CSV</button><button class="btn secondary" id="toggleDraftedBtn">Hide Drafted</button></div></aside>
+    <section class="card" id="tableCard"><div class="toolbar"><select id="prestigeFilter"><option value="all">Prestige</option><option value="1.5">1.5 Star</option><option value="1">1 Star</option><option value="0.5">0.5 Star</option><option value="0">0 Star</option></select><select id="ovrFilter"><option value="all">OVR</option><option value="75">OVR 75</option><option value="74">OVR 74</option><option value="72">OVR 72</option><option value="71">OVR 71</option><option value="70">OVR 70</option><option value="69">OVR 69</option><option value="67">OVR 67</option><option value="66">OVR 66</option><option value="65">OVR 65</option><option value="64">OVR 64</option><option value="62">OVR 62</option></select><button class="btn secondary" id="clearBtn">Clear</button></div><div class="tableWrap"><table><thead><tr><th data-sort="name">Team</th><th data-sort="prestige">Prestige</th><th data-sort="ovr">OVR</th></tr></thead><tbody id="teamBody"></tbody></table></div></section>
+    <aside class="card"><h2>Team Preview</h2><div class="preview" id="preview"></div><h2>Commissioner Note</h2><div style="padding:14px;color:var(--muted);line-height:1.45;font-size:13px">This version saves selections in the browser using localStorage. Host the same file on GitHub Pages for display. To make picks sync across different devices in real time, connect Firebase in the marked config section inside the file.</div></aside>
+  </main>
+</div><div class="toast" id="toast"></div>
+<script>
+const draftOrder=['Gas','Joey','Eddie','Red','Mcghee','Chop','Wayne','Peckin','Devo','Kobe','Yankee','Ben','Tp','Blevins','June','RyKno','Beamster'];
+const logoBase='https://a.espncdn.com/i/teamlogos/ncaa/500/';
+const teams=[
+{name:'USF',prestige:1.5,dpLeft:140,dpTotal:1625,ovr:75,off:76,def:74,id:'58'},
+{name:'North Texas',prestige:1.5,dpLeft:935,dpTotal:1875,ovr:74,off:76,def:71,id:'249'},
+{name:'UNLV',prestige:1.5,dpLeft:175,dpTotal:1370,ovr:74,off:74,def:74,id:'2439'},
+{name:'UTSA',prestige:1.5,dpLeft:795,dpTotal:1860,ovr:72,off:74,def:69,id:'2636'},
+{name:'Fresno State',prestige:1.5,dpLeft:1025,dpTotal:2135,ovr:72,off:74,def:71,id:'278'},
+{name:'Utah State',prestige:1.5,dpLeft:1085,dpTotal:1850,ovr:72,off:71,def:74,id:'328'},
+{name:'UConn',prestige:1.5,dpLeft:100,dpTotal:780,ovr:71,off:71,def:71,id:'41'},
+{name:'Tulsa',prestige:1.5,dpLeft:1270,dpTotal:2125,ovr:71,off:71,def:71,id:'202'},
+{name:'James Madison',prestige:1.5,dpLeft:5,dpTotal:1005,ovr:70,off:71,def:69,id:'256'},
+{name:'San Jose State',prestige:1.5,dpLeft:635,dpTotal:1300,ovr:69,off:69,def:69,id:'23'},
+{name:"Hawai'i",prestige:1.5,dpLeft:690,dpTotal:1410,ovr:69,off:69,def:71,id:'62'},
+{name:'Colorado State',prestige:1.5,dpLeft:860,dpTotal:1850,ovr:69,off:69,def:69,id:'36'},
+{name:'Western Kentucky',prestige:1.5,dpLeft:115,dpTotal:1135,ovr:67,off:69,def:66,id:'98'},
+{name:'NDSU',prestige:1.5,dpLeft:450,dpTotal:1425,ovr:67,off:69,def:66,id:'2449'},
+{name:'Rice',prestige:1.5,dpLeft:1225,dpTotal:1800,ovr:66,off:66,def:66,id:'242'},
+{name:'San Diego St.',prestige:1,dpLeft:615,dpTotal:1750,ovr:75,off:76,def:74,id:'21'},
+{name:'Liberty',prestige:1,dpLeft:105,dpTotal:1150,ovr:72,off:74,def:71,id:'2335'},
+{name:'Temple',prestige:1,dpLeft:175,dpTotal:1350,ovr:72,off:74,def:71,id:'218'},
+{name:'Sac State',prestige:1,dpLeft:60,dpTotal:735,ovr:71,off:71,def:71,id:'16'},
+{name:'Florida Atlantic',prestige:1,dpLeft:60,dpTotal:1175,ovr:71,off:71,def:71,id:'2226'},
+{name:'Ga Southern',prestige:1,dpLeft:115,dpTotal:960,ovr:71,off:71,def:71,id:'290'},
+{name:'App State',prestige:1,dpLeft:540,dpTotal:1485,ovr:71,off:71,def:71,id:'2026'},
+{name:'Arkansas State',prestige:1,dpLeft:5,dpTotal:1035,ovr:70,off:71,def:69,id:'2032'},
+{name:'Jax State',prestige:1,dpLeft:270,dpTotal:815,ovr:70,off:71,def:69,id:'55'},
+{name:'Miami (OH)',prestige:1,dpLeft:600,dpTotal:1125,ovr:70,off:71,def:69,id:'193'},
+{name:'Toledo',prestige:1,dpLeft:755,dpTotal:1105,ovr:69,off:69,def:69,id:'2649'},
+{name:'Troy',prestige:1,dpLeft:480,dpTotal:1035,ovr:69,off:69,def:71,id:'2653'},
+{name:'UAB',prestige:1,dpLeft:210,dpTotal:1015,ovr:69,off:69,def:71,id:'5'},
+{name:'Texas State',prestige:1,dpLeft:655,dpTotal:1725,ovr:69,off:69,def:69,id:'326'},
+{name:'Nevada',prestige:1,dpLeft:430,dpTotal:1180,ovr:69,off:69,def:69,id:'2440'},
+{name:'Central Michigan',prestige:1,dpLeft:150,dpTotal:685,ovr:67,off:69,def:64,id:'2117'},
+{name:'Western Michigan',prestige:1,dpLeft:160,dpTotal:910,ovr:67,off:69,def:66,id:'2711'},
+{name:'Wyoming',prestige:1,dpLeft:1040,dpTotal:1415,ovr:67,off:69,def:66,id:'2751'},
+{name:'Louisiana Tech',prestige:1,dpLeft:510,dpTotal:1010,ovr:67,off:69,def:66,id:'2348'},
+{name:'Louisiana',prestige:1,dpLeft:310,dpTotal:1100,ovr:67,off:69,def:66,id:'309'},
+{name:'Ohio',prestige:1,dpLeft:595,dpTotal:1095,ovr:67,off:66,def:69,id:'195'},
+{name:'Marshall',prestige:1,dpLeft:115,dpTotal:1100,ovr:67,off:66,def:69,id:'276'},
+{name:'FIU',prestige:1,dpLeft:215,dpTotal:565,ovr:67,off:66,def:69,id:'2229'},
+{name:'New Mexico',prestige:1,dpLeft:340,dpTotal:1090,ovr:66,off:66,def:66,id:'167'},
+{name:'New Mexico St.',prestige:1,dpLeft:170,dpTotal:660,ovr:66,off:66,def:66,id:'166'},
+{name:'Delaware',prestige:1,dpLeft:100,dpTotal:950,ovr:66,off:66,def:66,id:'48'},
+{name:'Air Force',prestige:1,dpLeft:560,dpTotal:1250,ovr:66,off:66,def:66,id:'2005'},
+{name:'Coastal Carolina',prestige:1,dpLeft:395,dpTotal:915,ovr:66,off:66,def:66,id:'324'},
+{name:'NIU',prestige:1,dpLeft:720,dpTotal:1120,ovr:64,off:66,def:61,id:'2459'},
+{name:'Old Dominion',prestige:1,dpLeft:25,dpTotal:760,ovr:64,off:64,def:66,id:'295'},
+{name:'Kennesaw St.',prestige:1,dpLeft:200,dpTotal:565,ovr:62,off:61,def:64,id:'338'},
+{name:'Sam Houston',prestige:.5,dpLeft:25,dpTotal:475,ovr:69,off:71,def:66,id:'2534'},
+{name:'Southern Miss',prestige:.5,dpLeft:565,dpTotal:870,ovr:69,off:69,def:69,id:'2572'},
+{name:'South Alabama',prestige:.5,dpLeft:115,dpTotal:690,ovr:69,off:69,def:69,id:'6'},
+{name:'Middle Tenn',prestige:.5,dpLeft:85,dpTotal:690,ovr:67,off:66,def:69,id:'2393'},
+{name:'Bowling Green',prestige:.5,dpLeft:390,dpTotal:840,ovr:67,off:66,def:69,id:'189'},
+{name:'Charlotte',prestige:.5,dpLeft:705,dpTotal:1150,ovr:66,off:66,def:66,id:'2429'},
+{name:'UMass',prestige:.5,dpLeft:175,dpTotal:410,ovr:66,off:66,def:66,id:'113'},
+{name:'Ball State',prestige:.5,dpLeft:240,dpTotal:595,ovr:65,off:66,def:64,id:'2050'},
+{name:'Eastern Michigan',prestige:.5,dpLeft:75,dpTotal:745,ovr:65,off:66,def:64,id:'2199'},
+{name:'UTEP',prestige:.5,dpLeft:350,dpTotal:975,ovr:64,off:64,def:64,id:'2638'},
+{name:'Missouri State',prestige:.5,dpLeft:90,dpTotal:475,ovr:64,off:64,def:64,id:'2623'},
+{name:'UL Monroe',prestige:.5,dpLeft:65,dpTotal:505,ovr:64,off:64,def:64,id:'2433'},
+{name:'Buffalo',prestige:0,dpLeft:65,dpTotal:565,ovr:66,off:66,def:66,id:'2084'},
+{name:'Georgia State',prestige:0,dpLeft:5,dpTotal:440,ovr:65,off:66,def:64,id:'2247'},
+{name:'Akron',prestige:0,dpLeft:70,dpTotal:720,ovr:64,off:64,def:64,id:'2006'},
+{name:'Kent State',prestige:0,dpLeft:80,dpTotal:410,ovr:64,off:64,def:64,id:'2309'}
+];
+let picks=JSON.parse(localStorage.getItem('cfb27_picks_v2')||'[]');let selected=null;let hideDrafted=false;let sortKey='ovr',sortDir='desc';
+const $=id=>document.getElementById(id);const logo=t=>logoBase+t.id+'.png';const stars=p=>p===1.5?'★½':p===1?'★':p===.5?'½':'0';const fmt=n=>Number(n).toLocaleString();const currentPick=()=>picks.length<draftOrder.length?picks.length:null;const pickedTeam=n=>picks.find(p=>p.team===n);const byName=n=>teams.find(t=>t.name===n);const initials=n=>n.split(/\s+/).map(x=>x[0]).join('').replace(/[^A-Z]/gi,'').slice(0,3).toUpperCase();
+function fallback(img,name){img.outerHTML=`<span class="teamLogo" style="display:grid;place-items:center;background:linear-gradient(135deg,#fff,#d8e8ff);color:#07111f;font-size:12px;font-weight:1000">${initials(name)}</span>`}
+function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2200)}
+function save(){localStorage.setItem('cfb27_picks_v2',JSON.stringify(picks));$('saveStatus').textContent='Saved locally • '+new Date().toLocaleTimeString()}
+function pickTeam(name){if(currentPick()===null)return toast('Draft is complete.');if(pickedTeam(name))return toast('That team has already been drafted.');const t=byName(name);picks.push({pick:picks.length+1,owner:draftOrder[picks.length],team:name,ts:new Date().toISOString(),ovr:t.ovr,off:t.off,def:t.def,dpTotal:t.dpTotal});save();render();toast(`${draftOrder[picks.length-1]} selected ${name}`)}
+function renderStats(){const available=teams.filter(t=>!pickedTeam(t.name));const bestO=[...available].sort((a,b)=>b.ovr-a.ovr||b.off-a.off)[0];const bestDP=[...available].sort((a,b)=>b.dpTotal-a.dpTotal)[0];const cp=currentPick();$('stats').innerHTML=`<div class="stat"><div class="label">Current Pick</div><div class="value">${cp===null?'Complete':'#'+(cp+1)+' '+draftOrder[cp]}</div><div class="sub">${17-picks.length} picks remaining</div></div><div class="stat"><div class="label">Eligible Teams</div><div class="value">${available.length}</div><div class="sub">available / ${teams.length} total</div></div><div class="stat"><div class="label">Highest OVR</div><div class="value">${bestO?bestO.ovr:'—'}</div><div class="sub">${bestO?bestO.name:'No teams left'}</div></div><div class="stat"><div class="label">Highest DP Total</div><div class="value">${bestDP?fmt(bestDP.dpTotal):'—'}</div><div class="sub">${bestDP?bestDP.name:'No teams left'}</div></div>`}
+function renderDraft(){const cp=currentPick();$('draftList').innerHTML=draftOrder.map((o,i)=>{const p=picks[i];const t=p?byName(p.team):null;return `<div class="pick ${i===cp?'current':''} ${p?'done':''}"><div class="picknum">${i+1}</div><div><div class="owner">${o}</div><div class="selection">${p?`<img class="miniLogo" src="${logo(t)}" onerror="this.style.display='none'"> ${p.team} • OVR ${t.ovr}`:'Waiting to pick'}</div></div></div>`}).join('')}
+function renderHistory(){$('history').innerHTML=picks.length?picks.map(p=>{const t=byName(p.team);return `<div class="histItem"><span class="tag">#${p.pick}</span><img class="miniLogo" src="${logo(t)}" onerror="this.style.display='none'"><b>${p.owner}</b><span style="color:var(--muted)">selected</span><b>${p.team}</b></div>`}).join(''):'<div style="color:var(--muted);padding:10px">No selections yet.</div>'}
+function selectPreview(name){selected=byName(name);renderTeams();renderPreview();$('preview').scrollIntoView({behavior:'smooth',block:'nearest'});}
+function renderTeams(){
+  const pf=$('prestigeFilter').value;
+  const of=$('ovrFilter').value;
+  let list=teams.filter(t=>(pf==='all'||String(t.prestige)===pf)&&(of==='all'||String(t.ovr)===of));
+  list.sort((a,b)=>{let av=a[sortKey],bv=b[sortKey];if(sortKey==='name'){av=a.name;bv=b.name} if(av>bv)return sortDir==='asc'?1:-1;if(av<bv)return sortDir==='asc'?-1:1;return a.name.localeCompare(b.name)});
+  $('teamBody').innerHTML=list.map(t=>{
+    const drafted=pickedTeam(t.name);
+    const active=selected&&selected.name===t.name;
+    const safe=t.name.replace(/'/g,"\\'");
+    return `<tr class="${drafted?'draftedRow':''} ${active?'activeRow':''}" data-team="${t.name.replace(/"/g,'&quot;')}" title="Click to preview ${t.name}"><td><div class="teamCell"><img class="teamLogo" src="${logo(t)}" onerror="fallback(this,'${safe}')"><div><div>${t.name}</div>${drafted?`<div class="teamHint">Drafted by ${drafted.owner}</div>`:'<div class="teamHint">Click to preview</div>'}</div></div></td><td>${t.prestige} Star</td><td class="rating ${t.ovr>=72?'high':t.ovr>=67?'mid':'low'}">OVR ${t.ovr}</td></tr>`
+  }).join('')||'<tr><td colspan="3" style="color:var(--muted);padding:18px">No teams match your filters.</td></tr>';
+  $('teamBody').querySelectorAll('tr[data-team]').forEach(row=>row.addEventListener('click',()=>selectPreview(row.dataset.team)));
+  $('tableCard').classList.toggle('hideDrafted',hideDrafted)
+}
+function renderPreview(){const t=selected||teams.find(x=>!pickedTeam(x.name))||teams[0];const drafted=pickedTeam(t.name);$('preview').innerHTML=`<img class="largeLogo" src="${logo(t)}" onerror="fallback(this,'${t.name.replace(/'/g,"\\'")}')"><h3>${t.name}</h3><div class="prestige">Prestige ${stars(t.prestige)} &nbsp; <span style="color:var(--muted)">${t.prestige} Star</span></div><div class="metricGrid"><div class="metric"><span>OVR</span><b>${t.ovr}</b></div><div class="metric"><span>OFF</span><b>${t.off}</b></div><div class="metric"><span>DEF</span><b>${t.def}</b></div></div><div class="metricGrid"><div class="metric"><span>DP Left</span><b>${fmt(t.dpLeft)}</b></div><div class="metric"><span>DP Total</span><b>${fmt(t.dpTotal)}</b></div><div class="metric"><span>Status</span><b style="font-size:15px;color:${drafted?'var(--red)':'var(--green)'}">${drafted?'Drafted':'Available'}</b></div></div>${drafted?`<button class="btn bigPick" disabled>Drafted by ${drafted.owner}</button>`:`<button class="btn bigPick" onclick="pickTeam('${t.name.replace(/'/g,"\\'")}')" ${currentPick()===null?'disabled':''}>Select for ${currentPick()===null?'Draft Complete':draftOrder[currentPick()]}</button>`}`}
+function render(){renderStats();renderDraft();renderHistory();renderTeams();renderPreview()}
+$('prestigeFilter').onchange=renderTeams;$('ovrFilter').onchange=renderTeams;$('clearBtn').onclick=()=>{$('prestigeFilter').value='all';$('ovrFilter').value='all';renderTeams()};document.querySelectorAll('th[data-sort]').forEach(th=>th.onclick=()=>{let k=th.dataset.sort;if(sortKey===k)sortDir=sortDir==='asc'?'desc':'asc';else{sortKey=k;sortDir=k==='name'?'asc':'desc'};renderTeams()});$('undoBtn').onclick=()=>{if(!picks.length)return toast('No picks to undo.');const p=picks.pop();save();render();toast(`Undid ${p.owner}'s pick`)};$('resetBtn').onclick=()=>{if(confirm('Reset the entire draft?')){picks=[];save();render();toast('Draft reset')}};$('toggleDraftedBtn').onclick=()=>{hideDrafted=!hideDrafted;$('toggleDraftedBtn').textContent=hideDrafted?'Show Drafted':'Hide Drafted';renderTeams()};$('exportBtn').onclick=()=>{const rows=[['Pick','Owner','Team','OVR','OFF','DEF','DP Left','DP Total','Prestige'],...picks.map(p=>{const t=byName(p.team);return[p.pick,p.owner,p.team,t.ovr,t.off,t.def,t.dpLeft,t.dpTotal,t.prestige]})];const csv=rows.map(r=>r.map(v=>`"${String(v).replaceAll('"','""')}"`).join(',')).join('\n');const blob=new Blob([csv],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='cfb27-draft-results.csv';a.click();URL.revokeObjectURL(a.href)};
+render();
+</script>
+</body>
+</html>
